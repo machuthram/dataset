@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "datasets",
+  "info": {
+    "singularName": "dataset",
+    "pluralName": "datasets",
+    "displayName": "Dataset"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "datasets"
+    }
+  }
+}
